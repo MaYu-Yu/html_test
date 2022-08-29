@@ -1,0 +1,29 @@
+body {
+    background-color: lightblue;
+}
+.red {
+    color: #f33;
+}
+
+.yellow-bg {
+    background: #ffa;
+}
+
+.fancy {
+    font-weight: bold;
+    text-shadow: 4px 4px 3px #77f;
+}
+
+.myBtn {
+    width: 10em;
+    height: 5ex;
+    background-color: red;
+    border: 2px solid firebrick;
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+.myBtn:hover {
+    background-color: bisque;
+}

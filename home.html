@@ -1,0 +1,120 @@
+<html>
+    <head>
+      <title>MyHtml</title>
+      <style type='text/css'>
+        h2 {color:red}
+      </style>
+      <!-- 外部樣式表-->
+      <link rel="stylesheet" type="text/css" href="./styles/home.css">
+    </head>
+
+    <body>
+      <h2 font-family:"新細明體";>頁首<a name='HOME'></a></h2>
+      <!-- 內部樣式表-->
+      <h1 style="font-size: 50px; color: darkturquoise; text-align: center;">內部樣式表測試</h1><br>
+      
+      <!-- javascript-->
+      <script src='./scripts/home.js'></script>
+      <script type="text/javascript">
+        document.write(" Hello Javascript ");
+        var stu_name = new Array("Marine", "Lin", "Suichan");
+        var stu_age = new Array(29, 21, 18);
+        var urls = new Array('https://www.youtube.com/channel/UCCzUftO8KOVkV4wQG1vkUvg', 'https://www.youtube.com/', 'https://www.youtube.com/channel/UC5CwaMl1eIgY8h02uZw7u8A')
+        var a = 1, b = 2,c;
+        for (let i = 0; i < stu_name.length; i++) {
+            const name = stu_name[i];
+            const age = stu_age[i];
+            const url = urls[i];
+            document.write("<br>My name is <a href='", url, "' target='_blank'>"
+                , name, "</a>.I'm ", age, " years old.<br>");
+        }
+      </script>
+
+      <ol id = 'olObj'>
+        <li>nbsp&nbsp;lt&lt;gt&gt;
+        <li>Marine
+      </ol>  
+      <!-- 動態填加list-->
+      <button class='myBtn' onclick='add_ol()'>Marine</button><br>
+      <!-- 內部跳轉 -->
+      <a href="#hor">內部跳轉#x</a>
+      <!-- Pre 讓空格TAB顯示-->
+      <pre>
+          tab 空格顯示
+      換行
+      </pre>
+      <div style="color:mediumvioletred">
+        一般<del>刪除文本</del> <ins>底線文本</ins> 。
+            <b>	定义粗体文本。</b>
+            <big>定义大号字。</big>
+            <em>定义着重文字。</em>
+            <i>	定义斜体字。</i>
+            <small>	定义小号字。</small>
+            <strong>定义加重语气。</strong>
+            <sub>定义下标字。</sub>
+            <sup>定义上标字。</sup>
+            <ins>定义插入字。</ins>
+            <del>定义删除字。</del>
+            <abbr title="What The Fuck">WTF</abbr> 
+      </div>
+
+      <!-- 郵件 %20是空格 mailto:信箱?&subject主旨 &body內容-->
+      <a href="mailto:eee123551233@gmail.com?
+        &subject=測試郵件%20123
+        &body=可以喔!!">
+        eee123551233@gmail.com
+      </a>
+      <!-- 水平線-->
+      <a name="hor"> 
+        <hr style="color: darkorchid;" /> 
+      </a>
+
+      <!-- 滑鼠事件 -->
+      <script>
+        function mouse_over(){
+          picture1.src='./assets/p1.png';
+        }
+        function mouse_out(){
+          picture1.src='./assets/p.png';
+        }
+      </script>
+      <!-- 超連結圖片 -->
+      <a href='' onMouseOver='mouse_over()' onMouseOut='mouse_out()'>
+        <img src='./assets/p.png', id='picture1' width="600" height="300", alt="" />
+      </a>
+      
+      <!-- VIDEO -->
+      <p>
+        <video width='320' height='240' controls>
+          <source src='./assets/watame.mp4' type='video/mp4' >
+          Your browser does not support the video tag.
+        </video>
+      </p>
+      <!-- TABLE -->
+      <script src='./scripts/Table_score.js'></script>   
+      <!-- FORM -->
+      <form name='info' action='test.php' method='POST'>
+        <p class='red'>ID: <input type='text' name='id'></p>
+        <p class='yellow-bg'>PASSWORD: <input type='password' name='password'></body></p>
+        <p class='fancy'>生日: <input type='date' name="birthday"></p>
+        <input type='button' value='計算歲數' onClick='calc_age()'>
+        <input type='text' id = 'age' readonly=true><br>
+        <!-- radio -->
+        <input type='radio' name='sex' value='boy'>男
+        <input type='radio' name='sex' value='girl'>女</p>
+        <!-- checkbox -->
+        <input type='checkbox' name='fav' value='basketball'>籃球
+        <input type='checkbox' name='fav' value='pienpong'>桌球
+        <input type='checkbox' name='fav' value='baseball'>棒球
+        <!-- select -->
+        <select name = 'jumpM' id= 'jumpM'>
+          <option value=''>GO to ?</option>
+          <option value = 'https://www.youtube.com/'>Youtube</option>
+          <option value = 'https://www.google.com.tw/'>Google</option>
+        </select>
+        <input type='submit' value='送出'>
+      </form>
+
+    <p><a href="#HOME">HOME</a></p>
+  </body>
+</html>
